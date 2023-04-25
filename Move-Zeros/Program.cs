@@ -6,49 +6,20 @@ using System.Threading.Tasks;
 
 namespace Move_Zeros
 {
-    class Program
+    class Program : Move
     {
         static void Main(string[] args)
         {
+            Move move = new Move();
             //Case 1
-            int[] nums1 = { 0, 1, 0, 3, 12 }; // out: [1,3,12,0,0]
-            MoveZeroes(nums1);
-
-            foreach(int num in nums1)
-            {
-                Console.Write(num + ",");
-                
-            }
-            Console.WriteLine() ;
-
+            int[] numbers1 = { 0, 1, 0, 3, 12 }; 
+            move.MoveZeroesToRight(numbers1);
+            move.Print(numbers1);
+           
             //Case 2
-            int[] nums2 = { 0 }; // out: [0]
-            MoveZeroes(nums2);
-            foreach (int num in nums2)
-            {
-                Console.Write(num + ",");
-
-            }
-
-        }
-        public static void MoveZeroes(int[] nums)
-        {
-            int j = 0;
-            for (int i = 0; i < nums.Length; i++)
-            {
-                if (nums[i] != 0)
-                {
-                    Swap(nums, i, j); // Partitioning the array
-                    j++;
-                }
-            }
-
-        }
-        static void Swap(int[] array, int i, int j)
-        {
-            int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+            int[] numbers2 = { 0 };
+            move.MoveZeroesToRight(numbers2);
+            move.Print(numbers2);
         }
     }
 }
