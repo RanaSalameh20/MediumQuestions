@@ -13,7 +13,10 @@
 *.user
 *.userosscache
 *.sln.docstates
+<<<<<<< HEAD
+=======
 **/properties/*
+>>>>>>> origin/main
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -44,6 +47,10 @@ bld/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
+<<<<<<< HEAD
+Permutations/Properties/AssemblyInfo.cs
+=======
+>>>>>>> origin/main
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -399,6 +406,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+<<<<<<< HEAD
+=======
 **/properties/*
+>>>>>>> origin/main
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp
