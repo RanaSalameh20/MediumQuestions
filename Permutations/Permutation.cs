@@ -5,18 +5,18 @@ namespace Permutations
 {
     internal class Permutation
     {
-        public IList<IList<int>> FindPermutations(int[] nums)
+        public List<List<int>> FindPermutations(int[] nums)
         {
-            IList<IList<int>> result = new List<IList<int>>();
+            List<List<int>> result = new List<List<int>>();
             Permute(nums, 0, result);
             return result;
         }
 
-        public void Permute(int[] nums, int start, IList<IList<int>> result)
+        public void Permute(int[] nums, int start, List<List<int>> result)
         {
             if (start == nums.Length - 1)
             {
-                IList<int> permutation = new List<int>(nums);
+                List<int> permutation = new List<int>(nums);
                 result.Add(permutation);
                 return;
             }
@@ -29,32 +29,22 @@ namespace Permutations
             }
         }
 
-        public void Swap(int[] nums, int i, int j)
+        private void Swap(int[] nums, int i, int j)
         {
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
         }
 
-        internal void PrintPermutations(IList<IList<int>> permutations)
+        public void PrintPermutations(List<List<int>> permutations)
         {
-            Console.Write("[");
-            foreach (IList<int> permutation in permutations)
-            {
-                Console.Write("[");
-                for (int i = 0; i < permutation.Count; i++)
-                {
-                    Console.Write(permutation[i]);
-                    if (i != permutation.Count - 1)
-                    {
-                        Console.Write(",");
-                    }
-                }
-                Console.Write("]");
-                //Console.WriteLine();
-            }
-            Console.Write("]");
+          
+            var parsedPermutations = new List<string>();
+            permutations.ForEach(x => parsedPermutations.Add($"[ {string.Join(" , ", x)} ]"));
+            var result = $"[ {string.Join(" , ", parsedPermutations)} ]";
+            Console.Write(result);
             Console.WriteLine("");
+
         }
     }
 }
