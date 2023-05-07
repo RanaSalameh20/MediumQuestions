@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Move_Zeros
+namespace Zeros
 {
-    public class Move
+    public class ZeroMoving
     {
         public void MoveZeroesToRight(int[] numbers)
         {
@@ -17,20 +17,17 @@ namespace Move_Zeros
             }
 
         }
-         void Swap(int[] array, int i, int j)
+        public void Swap(int[] array, int i, int j)
         {
             int temp = array[i];
             array[i] = array[j];
             array[j] = temp;
         }
 
-        internal void Print(int[] numbers)
+        public void Print(int[] numbers)
         {
-            foreach (int number in numbers)
-            {
-                Console.Write(number + ",");
-
-            }
+            string numbersString = string.Join(",", numbers);
+            Console.WriteLine(numbersString);
         }
     }
 }

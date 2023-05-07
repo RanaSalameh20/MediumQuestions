@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Move_Zeros
+namespace Zeros
 {
-    class Program : Move
+    class Program
     {
         static void Main(string[] args)
         {
-            Move move = new Move();
+            ZeroMoving move = new ZeroMoving();
+
             //Case 1
             int[] numbers1 = { 0, 1, 0, 3, 12 }; 
             move.MoveZeroesToRight(numbers1);
