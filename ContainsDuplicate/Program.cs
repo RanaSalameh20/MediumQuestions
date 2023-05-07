@@ -14,16 +14,19 @@ namespace ContainsDuplicate
 
             // Case 1
             int[] numbers1 = { 1, 2, 3, 1 };
-            Console.WriteLine(duplicate.CheckForDuplicates(numbers1));
+            bool result = duplicate.CheckForDuplicates(numbers1);
+            Console.WriteLine(result);
 
             // Case2 
             int[] numbers2 = { 1, 2, 3, 4 };
-            Console.WriteLine(duplicate.CheckForDuplicatesUsingLINQ(numbers2));
+            result = duplicate.CheckForDuplicatesUsingLINQ(numbers2);
+            Console.WriteLine(result);
 
 
             //Case3
             int[] numbers3 = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
-            Console.WriteLine(duplicate.CheckForDuplicatesUsingLINQ(numbers3));
+            result = duplicate.CheckForDuplicatesUsingLINQ(numbers3);
+            Console.WriteLine(result);
 
         }
     }
